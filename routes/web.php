@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -10,18 +11,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/**
+ * 博客登录后台统一路由配置
+ */
+Route::prefix('admin')->group(function () {
+    Route::get('login/index', 'Admin\LoginController@index');
+    Route::post('login/userLogin', 'Admin\LoginController@userLogin');
+});
 
-//Route::get('/', function () {
-////    return view('welcome');
-//    echo "hello word";
-//
-//});
-//Route::any('/', function () {
-//    echo "any hello word";
-//});
-//Route::match(['get', 'post'],'/', function () { return '你好, World!'; });
 
-//Route::get('/{id}', function ($id) { return 'Hello, World!'.$id; });
-//Route::get('task', 'TaskController@index');
-Route::get('task/read/{id}', 'TaskController@read');
-
+/**
+ * 博客登录前台统一路由配置
+ */
