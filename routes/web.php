@@ -15,10 +15,18 @@ use Illuminate\Support\Facades\Route;
  * 博客登录后台统一路由配置
  */
 Route::prefix('admin')->group(function () {
-    Route::get('login/index', 'Admin\LoginController@index');
-    Route::post('login/userLogin', 'Admin\LoginController@userLogin');
-});
+    //后台首页
+    Route::get('index', 'Admin\LoginController@index');
 
+    //验证登录
+    Route::post('loginAuth', 'Admin\LoginController@loginAuth');
+
+    Route::any('home', 'Admin\LoginController@home');
+
+    Route::get('welcome', 'Admin\LoginController@welcome');
+
+    Route::get('loginOut', 'Admin\LoginController@loginOut');
+});
 
 /**
  * 博客登录前台统一路由配置
