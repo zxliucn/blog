@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html class="x-admin-sm">
-    
+
     <head>
         <meta charset="UTF-8">
         <title>欢迎页面-X-admin2.2</title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
-        <link rel="stylesheet" href="./css/font.css">
-        <link rel="stylesheet" href="./css/xadmin.css">
-        <script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
-        <script type="text/javascript" src="./js/xadmin.js"></script>
+        @include('admin.public.style')
+        @include('admin.public.js')
         <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
         <!--[if lt IE 9]>
             <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -44,7 +42,7 @@
                         <label for="L_repass" class="layui-form-label">
                             <span class="x-red">*</span>确认密码</label>
                         <div class="layui-input-inline">
-                            <input type="password" id="L_repass" name="repass" required="" lay-verify="repass" autocomplete="off" class="layui-input"></div>
+                            <input type="password" id="L_repass"  required="" lay-verify="repass" autocomplete="off" class="layui-input"></div>
                     </div>
                     <div class="layui-form-item">
                         <label for="L_repass" class="layui-form-label"></label>
@@ -77,18 +75,28 @@
                 form.on('submit(add)',
                 function(data) {
                     console.log(data);
-                    //发异步，把数据提交给php
-                    layer.alert("增加成功", {
-                        icon: 6
-                    },
-                    function() {
-                        //关闭当前frame
-                        xadmin.close();
 
-                        // 可以对父窗口进行刷新 
-                        xadmin.father_reload();
+                    $.post("/admin/user",{'data':data.field,'_token':'{{ csrf_token() }}'},function(res){
+                        if(res.status==1){
+                            layer.alert(res.msg, {
+                                    icon: 6
+                                },
+                                function() {
+                                    //关闭当前frame
+                                    xadmin.close();
+                                    // 可以对父窗口进行刷新
+                                    xadmin.father_reload();
+                                });
+                        }else{
+                            layer.alert(res.msg, {
+                                    icon: 6
+                                },
+                                function() {
+                                });
+                        }
                     });
-                    return false;
+                    //发异步，把数据提交给php
+                     return false;
                 });
 
             });</script>

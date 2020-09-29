@@ -2,58 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3a1d56b-9fd5-4da4-a3d0-c182adba443a" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/public/fooder.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/public/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/public/js.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/public/sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/public/style.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layout/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/member-list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/admin-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/admin-cate.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin-cate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/admin-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/admin-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/admin-role.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin-role.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/admin-rule.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin-rule.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/cate.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/cate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/city.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/city.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/echarts1.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/echarts1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/echarts2.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/echarts2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/echarts3.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/echarts3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/echarts4.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/echarts4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/echarts5.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/echarts5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/echarts6.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/echarts6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/echarts7.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/echarts7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/echarts8.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/echarts8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/member-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/member-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/member-del.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/member-del.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/member-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/member-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/member-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/member-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/member-list1.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/member-list1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/member-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/member-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/order-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/order-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/order-list1.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order-list1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/role-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/role-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/unicode.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/unicode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/welcome1.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/welcome1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/member-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/member-del.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-del.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/member-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/member-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/public/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/public/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,6 +156,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin\user" />
       <recent name="D:\phpstudy_pro\WWW\laravel\public\admin" />
     </key>
   </component>
@@ -215,7 +175,10 @@
       <option name="presentableId" value="Default" />
       <updated>1600333714671</updated>
       <workItem from="1600333715782" duration="25260000" />
-      <workItem from="1600757102795" duration="10916000" />
+      <workItem from="1600757102795" duration="13895000" />
+      <workItem from="1600853660963" duration="735000" />
+      <workItem from="1601195603562" duration="5763000" />
+      <workItem from="1601289289703" duration="12910000" />
     </task>
     <servers />
   </component>
@@ -223,6 +186,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1664" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601199402388">
+      <screen x="1366" y="0" width="1080" height="1880" />
+    </state>
+    <state x="1664" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1601199402388" />
     <state width="1025" height="512" key="GridCell.Tab.0.bottom" timestamp="1600334527965">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
@@ -243,13 +210,17 @@
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
     <state x="1721" y="846" key="NewPhpFileDialog/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600767504039" />
-    <state x="124" y="0" width="1141" height="728" key="SettingsEditor" timestamp="1600334478780">
+    <state x="124" y="0" width="1141" height="728" key="SettingsEditor" timestamp="1600856014088">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="124" y="0" width="1141" height="728" key="SettingsEditor/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600334478780" />
+    <state x="124" y="0" width="1141" height="728" key="SettingsEditor/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600856014088" />
     <state x="1478" y="447" key="run.anything.popup" timestamp="1600333906419">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
     <state x="1478" y="447" key="run.anything.popup/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600333906419" />
+    <state x="1485" y="428" width="840" height="1034" key="search.everywhere.popup" timestamp="1600853670874">
+      <screen x="1366" y="0" width="1080" height="1880" />
+    </state>
+    <state x="1485" y="428" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600853670874" />
   </component>
 </project>

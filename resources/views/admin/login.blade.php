@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <link rel="stylesheet" href="{{ URL::asset('admin/css/font.css') }}"  >
     <link rel="stylesheet" href="{{ URL::asset('admin/css/login.css') }}" >
-	  <link rel="stylesheet" href="{{  URL::asset('admin/css/xadmin.css') }}">
+    <link rel="stylesheet" href="{{  URL::asset('admin/css/xadmin.css') }}">
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{  URL::asset('admin/lib/layui/layui.js') }}" charset="utf-8"></script>
     <!--[if lt IE 9]>
@@ -19,18 +19,22 @@
 </head>
 
 <!-- /resources/views/post/create.blade.php -->
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @if(is_object($errors))
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            @else
-                <li>{{ $errors }}</li>
-            @endif
-        </ul>
-    </div>
+@if (method_exists($errors,'any'))
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @if(is_object($errors))
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                @else
+                    <li>{{ $errors }}</li>
+                @endif
+            </ul>
+        </div>
+    @endif
+@else
+    <li>{{ $errors }}</li>
 @endif
 
 <!-- Create Post Form -->

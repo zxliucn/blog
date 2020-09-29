@@ -14,20 +14,23 @@ use Illuminate\Support\Facades\Route;
 /**
  * 博客登录后台统一路由配置
  */
-Route::prefix('admin')->group(function () {
-    //后台首页
-    Route::get('index', 'Admin\LoginController@index');
-
+//不需要登录验证
+Route::group(['prefix'=>'admin','namespace'=>'Admin'],function (){
+    //后台登录页
+    Route::get('index', 'LoginController@index');
     //验证登录
-    Route::post('loginAuth', 'Admin\LoginController@loginAuth');
-
-    Route::any('home', 'Admin\LoginController@home');
-
-    Route::get('welcome', 'Admin\LoginController@welcome');
-
-    Route::get('loginOut', 'Admin\LoginController@loginOut');
+    Route::post('loginAuth', 'LoginController@loginAuth');
 });
-
+//需要登录验证
+Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'isLogin'],function (){
+    //后台首页
+    Route::any('home', 'LoginController@home');
+    //后台欢迎页
+    Route::get('welcome', 'LoginController@welcome');
+    //退出登录
+    Route::get('loginOut', 'LoginController@loginOut');
+    Route::resource('user','UserController');
+});
 /**
  * 博客登录前台统一路由配置
  */
