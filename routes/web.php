@@ -18,8 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix'=>'admin','namespace'=>'Admin'],function (){
     //后台登录页
     Route::get('index', 'LoginController@index');
+
     //验证登录
     Route::post('loginAuth', 'LoginController@loginAuth');
+    Route::get('douyin', 'TestController@index');
 });
 //需要登录验证
 Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'isLogin'],function (){
@@ -30,6 +32,8 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'isLogin'],fu
     //退出登录
     Route::get('loginOut', 'LoginController@loginOut');
     Route::resource('user','UserController');
+    Route::resource('roles','RolesController');
+    Route::resource('funs','FunsController');
 });
 /**
  * 博客登录前台统一路由配置

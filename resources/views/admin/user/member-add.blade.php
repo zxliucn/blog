@@ -33,6 +33,16 @@
                             <input type="text" id="L_username" name="username" required="" lay-verify="nikename" autocomplete="off" class="layui-input"></div>
                     </div>
                     <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="x-red">*</span>角色</label>
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="like1[write]" lay-skin="primary" title="超级管理员" checked="">
+                            <input type="checkbox" name="like1[read]" lay-skin="primary" title="编辑人员">
+                            <input type="checkbox" name="like1[write]" lay-skin="primary" title="宣传人员" checked="">
+                            <input type="checkbox" name="like1[write]" lay-skin="primary" title="超级管理员" checked="">
+                            <input type="checkbox" name="like1[read]" lay-skin="primary" title="编辑人员">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
                         <label for="L_pass" class="layui-form-label">
                             <span class="x-red">*</span>密码</label>
                         <div class="layui-input-inline">
@@ -75,8 +85,8 @@
                 form.on('submit(add)',
                 function(data) {
                     console.log(data);
-
                     $.post("/admin/user",{'data':data.field,'_token':'{{ csrf_token() }}'},function(res){
+
                         if(res.status==1){
                             layer.alert(res.msg, {
                                     icon: 6

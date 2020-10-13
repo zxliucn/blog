@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="x-admin-sm">
-  
+
   <head>
     <meta charset="UTF-8">
     <title>欢迎页面-X-admin2.2</title>
@@ -17,7 +17,7 @@
       <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  
+
   <body>
     <div class="x-nav">
       <span class="layui-breadcrumb">
@@ -72,7 +72,7 @@
                           <tbody>
                             <tr>
                               <td>
-                                <input type="checkbox" name=""  lay-skin="primary"> 
+                                <input type="checkbox" name=""  lay-skin="primary">
                               </td>
                               <td>1</td>
                               <td>小明</td>
@@ -96,7 +96,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <input type="checkbox" name=""  lay-skin="primary"> 
+                                <input type="checkbox" name=""  lay-skin="primary">
                               </td>
                               <td>1</td>
                               <td>小明</td>
@@ -136,11 +136,11 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
     <script>
       layui.use(['laydate','form'], function(){
         var laydate = layui.laydate;
-        
+
         //执行一个laydate实例
         laydate.render({
           elem: '#start' //指定元素
@@ -167,7 +167,7 @@
       function delAll (argument) {
 
         var data = tableCheck.getData();
-  
+
         layer.confirm('确认要恢复吗？'+data,function(index){
             //捉到所有被选中的，发异步进行删除
             layer.msg('恢复成功', {icon: 1});

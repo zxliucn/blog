@@ -63,7 +63,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $userInfo=DB::table('admin')->where('admin_id',$id)->first();
+        return  view("admin.user.member-edit");
     }
 
     /**
@@ -73,7 +74,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        return  view("admin.user.member-edit");
+        $userInfo=DB::table('admin')->where('admin_id',$id)->first();
+        return  view("admin.user.member-edit",compact('userInfo'));
     }
 
     /**
@@ -84,7 +86,14 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $upData=$request->all()['data'];
+        $upData['admin_pass'] =  Hash::make($upData['admin_pass']);
+        $res=DB::table("admin")->where('admin_id',$id)->update($upData);
+        $data=['status'=>1,'msg'=>'更改成功'];
+        if(!$res){
+            $data=['status'=>0,'msg'=>'更改失败，请检查原因！！'];
+        }
+        return $data;
     }
 
     /**
@@ -94,6 +103,11 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $res=DB::table("admin")->where('admin_id',$id)->delete();
+        $data=['status'=>1,'msg'=>'删除成功'];
+        if(!$res){
+            $data=['status'=>0,'msg'=>'删除失败，请检查原因！！'];
+        }
+        return $data;
     }
 }

@@ -2,17 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3a1d56b-9fd5-4da4-a3d0-c182adba443a" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/member-list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TestController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/funs/funs-add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/funs/funs-edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/funs/funs-list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/role-add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/role-update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/member-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/member-del.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-del.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/member-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/member-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin-role.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/role-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/echarts1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/echarts2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/echarts3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/echarts4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/echarts5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/echarts6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/echarts7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/echarts8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/order-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/order-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/order-list1.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/public/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/public/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/member-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/member-del.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-del.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/member-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/member-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,6 +146,9 @@
       <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/smalls/video-tools" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hdGmW7AM05ncUyFCcFyZR9lLsX" />
@@ -143,7 +164,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/funs" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -151,13 +172,20 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin\funs" />
+      <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin" />
+      <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin\roles" />
       <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin\user" />
       <recent name="D:\phpstudy_pro\WWW\laravel\public\admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin\funs" />
+      <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin\roles" />
     </key>
   </component>
   <component name="RunManager">
@@ -178,7 +206,10 @@
       <workItem from="1600757102795" duration="13895000" />
       <workItem from="1600853660963" duration="735000" />
       <workItem from="1601195603562" duration="5763000" />
-      <workItem from="1601289289703" duration="12910000" />
+      <workItem from="1601289289703" duration="14661000" />
+      <workItem from="1602211417750" duration="23705000" />
+      <workItem from="1602483870815" duration="12415000" />
+      <workItem from="1602557487625" duration="1924000" />
     </task>
     <servers />
   </component>
@@ -186,10 +217,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1664" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601199402388">
+    <state x="1664" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602485425699">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
-    <state x="1664" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1601199402388" />
+    <state x="1664" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1602485425699" />
+    <state x="1570" y="636" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602493878443">
+      <screen x="1366" y="0" width="1080" height="1880" />
+    </state>
+    <state x="1570" y="636" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1602493878443" />
     <state width="1025" height="512" key="GridCell.Tab.0.bottom" timestamp="1600334527965">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
@@ -206,21 +241,25 @@
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
     <state width="1025" height="512" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600334527965" />
+    <state x="1620" y="608" key="NewPhpClassDialog" timestamp="1602485006774">
+      <screen x="1366" y="0" width="1080" height="1880" />
+    </state>
+    <state x="1620" y="608" key="NewPhpClassDialog/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1602485006774" />
     <state x="1721" y="846" key="NewPhpFileDialog" timestamp="1600767504039">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
     <state x="1721" y="846" key="NewPhpFileDialog/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600767504039" />
-    <state x="124" y="0" width="1141" height="728" key="SettingsEditor" timestamp="1600856014088">
+    <state x="124" y="0" width="1141" height="728" key="SettingsEditor" timestamp="1602226435104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="124" y="0" width="1141" height="728" key="SettingsEditor/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600856014088" />
+    <state x="124" y="0" width="1141" height="728" key="SettingsEditor/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1602226435104" />
     <state x="1478" y="447" key="run.anything.popup" timestamp="1600333906419">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
     <state x="1478" y="447" key="run.anything.popup/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600333906419" />
-    <state x="1485" y="428" width="840" height="1034" key="search.everywhere.popup" timestamp="1600853670874">
+    <state x="1485" y="428" width="840" height="1034" key="search.everywhere.popup" timestamp="1602495304014">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
-    <state x="1485" y="428" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600853670874" />
+    <state x="1485" y="428" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1602495304014" />
   </component>
 </project>
