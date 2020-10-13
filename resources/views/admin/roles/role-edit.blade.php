@@ -26,7 +26,7 @@
                         <span class="x-red">*</span>角色名
                     </label>
                     <div class="layui-input-inline">
-                        <input type="text" id="role_name" name="role_name" required="" lay-verify="required"
+                        <input type="text" id="role_name"  value="{{ $roleInfo->role_name }}" name="role_name" required="" lay-verify="required"
                         autocomplete="off" class="layui-input">
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                                     <div class="layui-input-block">
                                         @foreach($perDetail as $value )
                                             @if($value->per_type == $v->per_type)
-                                        <input class="per_id"  lay-skin="primary" type="checkbox" title="{{$value->per_name}}" value="{{$value->id}}">
+                                                <input  class="per_id" @if(in_array($value->id,$idsArray)) checked @endif lay-skin="primary" type="checkbox" title="{{$value->per_name}}" value="{{$value->id}}">
                                             @endif
                                         @endforeach
                                     </div>
@@ -60,16 +60,19 @@
                         描述
                     </label>
                     <div class="layui-input-block">
-                        <textarea placeholder="请输入内容" id="role_des" name="role_des" class="layui-textarea"></textarea>
+                        <textarea placeholder="请输入内容"  value="{{ $roleInfo->role_des }}" id="role_des" name="role_des" class="layui-textarea"></textarea>
                     </div>
                 </div>
                 <div class="layui-form-item">
-                <button class="layui-btn" lay-submit="" lay-filter="add">增加</button>
+                <button class="layui-btn" lay-submit="" lay-filter="add">修改</button>
               </div>
             </form>
         </div>
     </div>
     <script>
+        $().ready(function (){
+            $("#role_des").val('{{ $roleInfo->role_des }}');
+        });
         layui.use(['form','layer'], function(){
             $ = layui.jquery;
           var form = layui.form
@@ -78,40 +81,47 @@
           //自定义验证规则
           form.verify({
           });
+            form.on('submit(add)',
+                function(data) {
+                    console.log(data);
+                    var ids = [];
+                    $('.per_id').each(function(index, el) {
+                        if($(this).prop('checked')){
+                            ids.push($(this).val())
+                        }
+                    });
 
-          //监听提交
-          form.on('submit(add)',
-              function(data) {
-              console.log(data);
-              var ids = [];
-              $('.per_id').each(function(index, el) {
-                  if($(this).prop('checked')){
-                      ids.push($(this).val())
-                  }
-              });
-              $.post("/admin/roles",{'data':data.field,'_token':'{{ csrf_token() }}','per_id':ids.toString()},function(res){
-
-                  if(res.status==1){
-                      layer.alert(res.msg, {
-                              icon: 6
-                          },
-                          function() {
-                              //关闭当前frame
-                              xadmin.close();
-                              // 可以对父窗口进行刷新
-                              xadmin.father_reload();
-                          });
-                  }else{
-                      layer.alert(res.msg, {
-                              icon: 6
-                          },
-                          function() {
-                          });
-                  }
-              });
-              //发异步，把数据提交给php
-              return false;
-          });
+                    $.ajax({
+                            url: "/admin/roles/" + {{ $roleInfo->id}},
+                            type:"put",
+                            data:{
+                                'data':data.field,
+                                '_token':'{{ csrf_token() }}',
+                                'per_id':ids.toString()
+                            },
+                            success : function(res) {
+                                if(res.status==1){
+                                    layer.alert(res.msg, {
+                                            icon: 6
+                                        },
+                                        function() {
+                                            //关闭当前frame
+                                            xadmin.close();
+                                            // 可以对父窗口进行刷新
+                                            xadmin.father_reload();
+                                        });
+                                }else{
+                                    layer.alert(res.msg, {
+                                            icon: 6
+                                        },
+                                        function() {
+                                        });
+                                }
+                            }
+                    });
+                    //发异步，把数据提交给php
+                    return false;
+                });
 
 
         form.on('checkbox(father)', function(data){
