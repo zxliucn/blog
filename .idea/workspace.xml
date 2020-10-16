@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3a1d56b-9fd5-4da4-a3d0-c182adba443a" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/role-edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/error/error.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TestController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/public/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/public/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/role-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/role-add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/role-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/role-list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/member-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/member-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/member-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +133,7 @@
   </component>
   <component name="ProjectId" id="1hdGmW7AM05ncUyFCcFyZR9lLsX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="新增" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -142,7 +144,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/roles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/error" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -155,6 +157,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\error" />
       <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin\roles" />
       <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin\funs" />
     </key>
@@ -187,7 +190,10 @@
       <workItem from="1601289289703" duration="14661000" />
       <workItem from="1602211417750" duration="23705000" />
       <workItem from="1602483870815" duration="12415000" />
-      <workItem from="1602557487625" duration="19613000" />
+      <workItem from="1602557487625" duration="27032000" />
+      <workItem from="1602671693272" duration="9365000" />
+      <workItem from="1602747020206" duration="3139000" />
+      <workItem from="1602818576219" duration="13097000" />
     </task>
     <servers />
   </component>
@@ -195,10 +201,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1664" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602485425699">
+    <state x="1366" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602826390016">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
-    <state x="1664" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1602485425699" />
+    <state x="1366" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1602826390016" />
     <state x="1570" y="636" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602566450853">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
@@ -219,10 +225,10 @@
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
     <state width="1025" height="512" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600334527965" />
-    <state x="1620" y="608" key="NewPhpClassDialog" timestamp="1602485006774">
+    <state x="1620" y="608" key="NewPhpClassDialog" timestamp="1602832338679">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
-    <state x="1620" y="608" key="NewPhpClassDialog/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1602485006774" />
+    <state x="1620" y="608" key="NewPhpClassDialog/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1602832338679" />
     <state x="1721" y="846" key="NewPhpFileDialog" timestamp="1600767504039">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
@@ -235,9 +241,9 @@
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
     <state x="1478" y="447" key="run.anything.popup/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1600333906419" />
-    <state x="1485" y="428" width="840" height="1034" key="search.everywhere.popup" timestamp="1602584274274">
+    <state x="1485" y="428" width="840" height="1034" key="search.everywhere.popup" timestamp="1602836067632">
       <screen x="1366" y="0" width="1080" height="1880" />
     </state>
-    <state x="1485" y="428" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1602584274274" />
+    <state x="1485" y="428" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728/1366.0.1080.1880@1366.0.1080.1880" timestamp="1602836067632" />
   </component>
 </project>

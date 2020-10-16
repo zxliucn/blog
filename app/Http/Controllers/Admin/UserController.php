@@ -16,6 +16,7 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
+
           $userList = DB::table("admin")
               ->orderBy('admin_id','desc')
               ->where(function ($queue) use($request){
@@ -34,9 +35,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        $roleInfo = DB::table('');
-
-        return view("admin.user.member-add");
+        $roleInfo = DB::table('role')->get();
+        return view("admin.user.member-add",compact('roleInfo'));
     }
 
     /**
@@ -50,7 +50,15 @@ class UserController extends Controller
         $inData['admin_name'] = $fromData['username'];
         $inData['admin_pass'] = Hash::make($fromData['pass']);
         $inData['admin_email'] = $fromData['email'];
-        $res =  DB::table("admin")->insert($inData);
+        $insertId =  DB::table("admin")->insertGetId($inData);
+        if($insertId){
+            $res = DB::table("admin_role")->insert(
+                [
+                    'admin_id'=>$insertId,
+                    'role_id' =>$fromData=$request->all()['role_id'],
+                ]
+            );
+        }
         $data=['status'=>1,'msg'=>'添加成功'];
         if(!$res){
             $data=['status'=>0,'msg'=>'添加失败，请检查原因！！'];
@@ -77,7 +85,13 @@ class UserController extends Controller
     public function edit($id)
     {
         $userInfo=DB::table('admin')->where('admin_id',$id)->first();
-        return  view("admin.user.member-edit",compact('userInfo'));
+        $userRoleInfo=DB::table('admin_role')->where('admin_id',$userInfo->admin_id)->first('role_id');
+        $userRoleArray=[];
+        if($userRoleInfo){
+            $userRoleArray=explode(',',$userRoleInfo->role_id);
+        }
+        $roleInfo = DB::table('role')->get();
+        return  view("admin.user.member-edit",compact('userInfo','userRoleArray','roleInfo'));
     }
 
     /**
@@ -91,6 +105,11 @@ class UserController extends Controller
         $upData=$request->all()['data'];
         $upData['admin_pass'] =  Hash::make($upData['admin_pass']);
         $res=DB::table("admin")->where('admin_id',$id)->update($upData);
+        $res = DB::table("admin_role")->where('admin_id',$id)->update(
+            [
+                'role_id' =>$fromData=$request->all()['role_id'],
+            ]
+        );
         $data=['status'=>1,'msg'=>'更改成功'];
         if(!$res){
             $data=['status'=>0,'msg'=>'更改失败，请检查原因！！'];
@@ -112,4 +131,15 @@ class UserController extends Controller
         }
         return $data;
     }
+
+    /**
+     * Notes:没有权限页面
+     * User: Depp
+     * Date: 2020/10/16
+     * Time: 15:02
+     */
+    public function noauth(){
+        return  view("error.error");
+    }
+
 }

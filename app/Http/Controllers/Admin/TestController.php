@@ -23,5 +23,6 @@ class TestController extends Controller
     {
         $url="https://v.douyin.com/Jf1h6fk/";
         dd(VideoManager::DouYin()->start($url));
+
     }
 }

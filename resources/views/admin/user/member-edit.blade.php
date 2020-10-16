@@ -38,6 +38,14 @@
                             <input type="password"  id="L_pass" name="admin_pass" required="" lay-verify="pass" autocomplete="off" class="layui-input"></div>
                         <div class="layui-form-mid layui-word-aux">6到16个字符</div></div>
                     <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="x-red">*</span>角色</label>
+                        <div class="layui-input-block">
+                            @foreach($roleInfo as $v)
+                                <input type="checkbox"  @if(in_array($v->id,$userRoleArray)) checked @endif class="role_id" value="{{ $v->id }}" lay-skin="primary" title="{{ $v->role_name }}" >
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
                         <label for="L_repass" class="layui-form-label"></label>
                         <button class="layui-btn" lay-filter="add" lay-submit="">确认</button></div>
                 </form>
@@ -63,12 +71,19 @@
                 form.on('submit(add)',
                     function(data) {
                         console.log(data);
+                        var ids = [];
+                        $('.role_id').each(function(index, el) {
+                            if($(this).prop('checked')){
+                                ids.push($(this).val())
+                            }
+                        });
                         $.ajax({
                             url: "/admin/user/" + {{ $userInfo->admin_id}},
                             type:"put",
                             data:{
                                 'data':data.field,
-                                '_token':'{{ csrf_token() }}'
+                                '_token':'{{ csrf_token() }}',
+                                'role_id':ids.toString()
                             },
                             success : function(res) {
                                 if(res.status==1){

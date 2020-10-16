@@ -95,4 +95,5 @@ class LoginController extends Controller
         session()->flush();
         return redirect('admin/index');
     }
+
 }

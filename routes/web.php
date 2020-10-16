@@ -22,18 +22,20 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'],function (){
     //验证登录
     Route::post('loginAuth', 'LoginController@loginAuth');
     Route::get('douyin', 'TestController@index');
-});
-//需要登录验证
-Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'isLogin'],function (){
-    //后台首页
+    Route::get('noauth', 'UserController@noauth');
     Route::any('home', 'LoginController@home');
-    //后台欢迎页
-    Route::get('welcome', 'LoginController@welcome');
     //退出登录
     Route::get('loginOut', 'LoginController@loginOut');
+});
+//需要登录验证
+Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['isLogin','hasRole']],function (){
+    //后台首页
+    //后台欢迎页
+    Route::get('welcome', 'LoginController@welcome');
     Route::resource('user','UserController');
     Route::resource('roles','RolesController');
     Route::resource('funs','FunsController');
+    Route::resource('Cate','CateController');
 });
 /**
  * 博客登录前台统一路由配置
