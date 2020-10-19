@@ -21,7 +21,7 @@
                 <form class="layui-form">
                   <div class="layui-form-item">
                       <label for="username" class="layui-form-label">
-                          <span class="x-red">*</span>权限规则
+                          <span class="x-red">*</span>分类名称
                       </label>
                       <div class="layui-input-inline">
                           <input type="text" id="funs_url" name="funs_url" required="" lay-verify="required"
@@ -30,7 +30,7 @@
                   </div>
                   <div class="layui-form-item">
                       <label for="phone" class="layui-form-label">
-                          <span class="x-red">*</span>权限名称
+                          <span class="x-red">*</span>分类视图
                       </label>
                       <div class="layui-input-inline">
                           <input type="text" id="funs_name" name="funs_name" required="" lay-verify="required"
@@ -39,7 +39,7 @@
                   </div>
                     <div class="layui-form-item">
                         <label for="phone" class="layui-form-label">
-                            <span class="x-red">*</span>所属分类
+                            <span class="x-red">*</span>分类排序
                         </label>
                         <div class="layui-input-inline">
                             <input type="text" id="funs_type" name="funs_type" required="" lay-verify="required"

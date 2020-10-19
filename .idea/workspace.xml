@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3a1d56b-9fd5-4da4-a3d0-c182adba443a" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/error/error.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/public/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/public/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/member-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/member-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/member-edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/cate/cate-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/cate/cate-add.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +136,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/error" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/cate" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -157,6 +149,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin\cate" />
       <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\error" />
       <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin\roles" />
       <recent name="D:\phpstudy_pro\WWW\laravel\resources\views\admin\funs" />
@@ -193,7 +186,7 @@
       <workItem from="1602557487625" duration="27032000" />
       <workItem from="1602671693272" duration="9365000" />
       <workItem from="1602747020206" duration="3139000" />
-      <workItem from="1602818576219" duration="13097000" />
+      <workItem from="1602818576219" duration="16611000" />
     </task>
     <servers />
   </component>
