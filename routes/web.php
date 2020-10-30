@@ -35,7 +35,8 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['isLogin','h
     Route::resource('user','UserController');
     Route::resource('roles','RolesController');
     Route::resource('funs','FunsController');
-    Route::resource('Cate','CateController');
+    Route::resource('cate','CateController');
+    Route::resource('art','ArticleController');
 });
 /**
  * 博客登录前台统一路由配置

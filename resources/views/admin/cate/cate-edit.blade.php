@@ -7,8 +7,8 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
-    @include('admin.public.style')
-    @include('admin.public.js')
+@include('admin.public.style')
+@include('admin.public.js')
 <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -21,28 +21,40 @@
         <form class="layui-form">
             <div class="layui-form-item">
                 <label for="username" class="layui-form-label">
-                    <span class="x-red">*</span>权限规则
-                </label>
-                <div class="layui-input-inline">
-                    <input type="text" id="funs_url" value="{{ $funsInfo->per_url }}" name="funs_url" required="" lay-verify="required"
-                           autocomplete="off" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label for="phone" class="layui-form-label">
-                    <span class="x-red">*</span>权限名称
-                </label>
-                <div class="layui-input-inline">
-                    <input type="text" id="funs_name" value="{{ $funsInfo->per_name }}" name="funs_name" required="" lay-verify="required"
-                           autocomplete="off" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label for="phone" class="layui-form-label">
                     <span class="x-red">*</span>所属分类
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="funs_type" value="{{ $funsInfo->per_type }}" name="funs_type" required="" lay-verify="required"
+                    <select name="cate_pid" lay-filter="aihao">
+                        @foreach($cateList as $v)
+                            <option @if($cateInfo->cate_pid == $v->cate_id ) selected @endif value="{{ $v->cate_id }}">{{ $v->cate_name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="username" class="layui-form-label">
+                    <span class="x-red">*</span>分类名称
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{{$cateInfo->cate_name}}" id="cate_name" name="cate_name" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="phone" class="layui-form-label">
+                    <span class="x-red">*</span>分类视图
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text"  value="{{$cateInfo->cate_view}}" id="cate_view" name="cate_view" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="phone" class="layui-form-label">
+                    <span class="x-red">*</span>分类排序
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{{$cateInfo->cate_order}}"  id="cate_order" name="cate_order" required="" lay-verify="required"
                            autocomplete="off" class="layui-input">
                 </div>
             </div>
@@ -61,13 +73,12 @@
             //自定义验证规则
             form.verify({
             });
-
             //监听提交
             form.on('submit(add)',
                 function(data) {
                     console.log(data);
                     $.ajax({
-                        url: "/admin/funs/" + {{ $funsInfo->id}},
+                        url: "/admin/cate/" + {{ $cateInfo->cate_id}},
                         type:"put",
                         data:{
                             'data':data.field,
@@ -98,6 +109,7 @@
                     });
                     return false;
                 });
+
         });</script>
 <script>var _hmt = _hmt || []; (function() {
         var hm = document.createElement("script");

@@ -30,7 +30,7 @@ class FunsController extends Controller
                     $queue->where('per_type','like','%'.$perType.'%');
                 }
             })
-            ->paginate($request->input('page_num')??4);
+            ->paginate($request->input('page_num')??7);
 
         return  view("admin.funs.funs-list",compact('funsList','request'));
     }

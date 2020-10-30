@@ -33,8 +33,8 @@
                             <form class="layui-form layui-col-space5" method="get" action="{{url("admin/funs")}}">
                                 <div class="layui-input-inline">
                                     <select name="page_num" lay-filter="aihao">
-                                        <option value="4" @if($request->input("page_num")==4) selected @endif>4</option>
-                                        <option value="10" @if($request->input("page_num")==10) selected @endif>10</option>
+                                        <option value="7" @if($request->input("page_num")==7) selected @endif>7</option>
+                                        <option value="15" @if($request->input("page_num")==15) selected @endif>15</option>
                                     </select>
                                 </div>
                                 <div class="layui-inline layui-show-xs-block">

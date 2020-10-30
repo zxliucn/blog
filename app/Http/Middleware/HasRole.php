@@ -35,7 +35,6 @@ class  HasRole
                 }
             }
         }
-//        return $next($request);
         if(in_array($route,$perUrlArray)){
             return $next($request);
         }else{

@@ -31,17 +31,8 @@
                         <div class="layui-card-body ">
 
                             <form class="layui-form layui-col-space5" method="get" action="{{url("admin/funs")}}">
-                                <div class="layui-input-inline">
-                                    <select name="page_num" lay-filter="aihao">
-                                        <option value="4" @if($request->input("page_num")==4) selected @endif>4</option>
-                                        <option value="10" @if($request->input("page_num")==10) selected @endif>10</option>
-                                    </select>
-                                </div>
                                 <div class="layui-inline layui-show-xs-block">
-                                    <input type="text" name="per_name"  value="{{ $request->input('per_name') }}" placeholder="请输入权限名称" autocomplete="off" class="layui-input">
-                                </div>
-                                <div class="layui-inline layui-show-xs-block">
-                                    <input type="text" name="per_type"  value="{{ $request->input('per_type') }}" placeholder="请输入所属分类" autocomplete="off" class="layui-input">
+                                    <input type="text" name="cate_name"  value="{{ $request->input('cate_name') }}" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
                                 </div>
                                 <div class="layui-inline layui-show-xs-block">
                                     <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
@@ -49,38 +40,28 @@
                             </form>
                         </div>
                         <div class="layui-card-header">
-                            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-                            <button class="layui-btn" onclick="xadmin.open('添加权限','{{ url('admin/funs/create') }}',600,400)"><i class="layui-icon"></i>添加</button>
+                            <button class="layui-btn" onclick="xadmin.open('添加分类','{{ url('admin/cate/create') }}',600,400)"><i class="layui-icon"></i>添加</button>
                         </div>
                         <div class="layui-card-body ">
                             <table class="layui-table layui-form">
                               <thead>
                                 <tr>
-                                  <th>
-                                    <input type="checkbox" name=""  lay-skin="primary">
-                                  </th>
-                                  <th>ID</th>
-                                  <th>权限规则</th>
-                                  <th>权限名称</th>
-                                  <th>所属分类</th>
+                                    <th>分类排序</th>
+                                  <th>分类视图</th>
+                                  <th>分类名称</th>
                                   <th>操作</th>
                               </thead>
                               <tbody>
-                              @foreach($funsList as $v)
+                              @foreach($catesList as $v)
                                 <tr>
-                                  <td>
-                                   <input type="checkbox" name=""  lay-skin="primary">
-                                  </td>
-
-                                  <td>{{ $v->id  }}</td>
-                                  <td>{{ $v->per_url  }}</td>
-                                    <td>{{ $v->per_name }}</td>
-                                  <td>{{ $v->per_type }}</td>
+                                    <td>{{ $v->cate_order  }}</td>
+                                    <td>{{ $v->cate_name  }}</td>
+                                    <td>{{ $v->cate_view }}</td>
                                   <td class="td-manage">
-                                    <a title="编辑"  onclick="xadmin.open('编辑','{{url('admin/funs/'.$v->id.'/edit')}}',600,400)" href="javascript:;">
+                                    <a title="编辑"  onclick="xadmin.open('编辑','{{url('admin/cate/'.$v->cate_id.'/edit')}}',600,400)" href="javascript:;">
                                       <i class="layui-icon">&#xe642;</i>
                                     </a>
-                                    <a title="删除" onclick="member_del(this,{{ $v->id }})" href="javascript:;">
+                                    <a title="删除" onclick="member_del(this,{{ $v->cate_id }})" href="javascript:;">
                                       <i class="layui-icon">&#xe640;</i>
                                     </a>
                                   </td>
@@ -92,7 +73,7 @@
                         <div class="layui-card-body ">
                             <div class="page">
                                 {{--分页时传递参数--}}
-                                {!! $funsList->appends($request->all())->render() !!}
+{{--                                {!! $catesList->appends($request->all())->render() !!}--}}
                             </div>
                         </div>
                     </div>

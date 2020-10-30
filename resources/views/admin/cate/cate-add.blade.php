@@ -19,12 +19,24 @@
         <div class="layui-fluid">
             <div class="layui-row">
                 <form class="layui-form">
+                    <div class="layui-form-item">
+                        <label for="username" class="layui-form-label">
+                            <span class="x-red">*</span>所属分类
+                        </label>
+                        <div class="layui-input-inline">
+                            <select name="cate_pid" lay-filter="aihao">
+                                @foreach($cateList as $v)
+                                    <option value="{{ $v->cate_id }}">{{ $v->cate_name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
                   <div class="layui-form-item">
                       <label for="username" class="layui-form-label">
                           <span class="x-red">*</span>分类名称
                       </label>
                       <div class="layui-input-inline">
-                          <input type="text" id="funs_url" name="funs_url" required="" lay-verify="required"
+                          <input type="text" id="cate_name" name="cate_name" required="" lay-verify="required"
                           autocomplete="off" class="layui-input">
                       </div>
                   </div>
@@ -33,7 +45,7 @@
                           <span class="x-red">*</span>分类视图
                       </label>
                       <div class="layui-input-inline">
-                          <input type="text" id="funs_name" name="funs_name" required="" lay-verify="required"
+                          <input type="text" id="cate_view" name="cate_view" required="" lay-verify="required"
                           autocomplete="off" class="layui-input">
                       </div>
                   </div>
@@ -42,7 +54,7 @@
                             <span class="x-red">*</span>分类排序
                         </label>
                         <div class="layui-input-inline">
-                            <input type="text" id="funs_type" name="funs_type" required="" lay-verify="required"
+                            <input type="text" id="cate_order" name="cate_order" required="" lay-verify="required"
                                    autocomplete="off" class="layui-input">
                         </div>
                     </div>
@@ -66,7 +78,7 @@
                 form.on('submit(add)',
                     function(data) {
                         console.log(data);
-                        $.post("/admin/funs",{'data':data.field,'_token':'{{ csrf_token() }}'},function(res){
+                        $.post("/admin/cate",{'data':data.field,'_token':'{{ csrf_token() }}'},function(res){
                             if(res.status==1){
                                 layer.alert(res.msg, {
                                         icon: 6
